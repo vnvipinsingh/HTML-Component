@@ -1,0 +1,44 @@
+.toggle-switch{
+    position: relative;
+}
+
+.toggle-checkbox{
+    position: absolute;
+    visibility: hidden;
+    cursor: default;
+    z-index: -100;
+}
+
+.toggle-label{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label::before{
+    content: "";
+    width: 2.2em;
+    height: .2em;
+    border-radius: 1em;
+    background-color: pink;
+}
+
+.toggle-label::after{
+    position: absolute;
+    left: .1em;
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    background-color: coral;
+    transition: translate ease 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label::before{
+    background-color: aquamarine;
+}
+
+.toggle-checkbox:checked + .toggle-label::after{
+    background-color: mediumseagreen;
+    translate: 1em;
+}
