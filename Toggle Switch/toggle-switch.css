@@ -13,12 +13,13 @@
     position: relative;
     display: flex;
     align-items: center;
+    font-size: 2.5rem;
 }
 
 .toggle-label::before{
     content: "";
     width: 2.2em;
-    height: .2em;
+    height: .3em;
     border-radius: 1em;
     background-color: pink;
 }
@@ -31,7 +32,7 @@
     height: 1em;
     border-radius: 1em;
     background-color: coral;
-    transition: translate ease 0.3s;
+    transition: translate ease 0.2s;
 }
 
 .toggle-checkbox:checked + .toggle-label::before{
@@ -41,4 +42,12 @@
 .toggle-checkbox:checked + .toggle-label::after{
     background-color: mediumseagreen;
     translate: 1em;
+}
+
+.toggle-checkbox:disabled + .toggle-label::before{
+    background-color: hsla(250, 50%, 50%, 0.2);
+}
+
+.toggle-checkbox:disabled + .toggle-label::after{
+    background-color: hsla(250, 50%, 10%, 0.5);
 }
